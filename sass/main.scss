@@ -1,0 +1,30 @@
+// Utils
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+// Base
+@import './base/common';
+@import './base/reset';
+@import './base/card-set';
+
+// Components
+@import './components/buttons';
+@import './components/container';
+@import './components/networks';
+@import './components/subtitle';
+@import './components/title';
+@import './components/slider';
+@import './components/modal';
+
+// layouts
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/price';
+@import './layouts/benefits';
+@import './layouts/masters';
+@import './layouts/works';
+@import './layouts/contacts';
+@import './layouts/footer';

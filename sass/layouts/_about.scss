@@ -1,0 +1,41 @@
+/* Section About */
+.about {
+    @extend %section;
+}
+
+.about__container {
+    display: flex;
+}
+
+.about__list {
+    display: flex;
+    margin-right: 60px;
+}
+
+.about__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.about__group {
+    width: 500px;
+}
+
+.about__subtitle {
+    margin-bottom: 20px;
+}
+
+.about__title {
+    margin-bottom: 20px;
+}
+
+.about__paragraph {
+    margin-bottom: 20px;
+
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.about__descr {
+    margin-bottom: 40px;
+    @include text(null, 14px, 26px, 0.02em);
+}

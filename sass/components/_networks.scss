@@ -1,0 +1,39 @@
+.networks {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: #303030;
+
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        transition: fill 250ms linear;
+        color: #303030;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}

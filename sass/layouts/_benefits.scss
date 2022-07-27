@@ -1,0 +1,81 @@
+/* Section Benefits */
+.benefits {
+    @extend %section;
+}
+
+.benefits__container {
+    display: flex;
+}
+
+.benefits__list {
+    position: relative;
+    width: 600px;
+    padding-left: 110px;
+}
+
+.benefits__item {
+    width: 170px;
+    height: 133px;
+    background-color: #F7F7F7;
+
+    &:nth-last-of-type(2n) {
+        margin-right: 30px;
+    }
+    
+    &:nth-child(-n+2) {
+        margin-bottom: 30px;
+    }
+}
+
+.benefits__number {
+    padding: 20px 45px 6px 45px;
+    @include text (700, 42px, 57px, 0.05em);
+    text-align: center;
+    color: #303030;
+
+    &--plus {
+        top: -1.5em;
+        @include text (600, 16px, 22px, null);
+        text-align: center;
+        color: var(--accent-color);
+    }
+}
+
+.benefits__text {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    @include text (600, 11px, 15px, null);
+    text-align: center;
+    color: #303030;
+    text-align: center;
+}
+
+.benefits__item--50 {
+    position: absolute;
+    right: 120px;
+    top: 35px;
+}
+
+.benefits__item--100 {
+    position: absolute;
+    right: 120px;
+    top: 195px;
+}
+
+.benefits__descr {
+    width: 500px;
+}
+
+.benefits__subtitle {
+    margin-bottom: 20px;
+}
+
+.benefits__title {
+    margin-bottom: 20px;
+}
+
+.benefits__paragraph {
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}

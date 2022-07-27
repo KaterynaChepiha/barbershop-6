@@ -1,0 +1,41 @@
+/* Footer */
+.footer {
+    background: #F7F7F7;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.footer__copyright {
+    margin-left: 40px;
+    @include text (600, 11px, 15px, 0.2em);
+    color: var(--secondary-text-color);
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+}
+
+.footer__item {
+    margin-right: 30px;
+
+    &--instagram::before {
+        content: '';
+        margin-right: 20px;
+        width: 60px;
+        height: 1px;
+        display: inline-block;
+        background-color: #303030;
+    }
+}
+
+.footer__item--instagram,
+.footer__item--youtube {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,192 @@
+/* Section Contacts */
+.contacts {
+    @extend %section;
+    
+    background: #191C26;
+    background-image: url(../../images/contacts/contacts-bg.png);
+    background-repeat: no-repeat;
+    background-position: top 50% left calc(50% + 312px);
+    background-size: contain;
+}
+
+.contacts__container {
+    display: flex;
+}
+
+.contacts__left {
+    margin-right: 140px;
+}
+
+.contacts__title {
+    margin-bottom: 44px;
+    opacity: 0.6;
+}
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 44px;
+}
+
+.contacts__group {
+    position: relative;
+    margin-bottom: 44px;
+    color: var(--primary-text-color);
+}
+
+.contacts__field {
+    width: 270px;
+    height: 26px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--primary-text-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:not(:placeholder-shown) {
+        border-color: #ffffff;
+    }
+}
+
+.contacts__field--phone {
+    width: 260px;
+}
+
+.contacts__field:focus:invalid:not(:placeholder-shown),
+.contacts__field:invalid:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+}
+
+.contacts__field:focus:valid:not(:placeholder-shown),
+.contacts__field:valid:not(:placeholder-shown) {
+    border-color: #008000;
+}
+
+.contacts__field::placeholder {
+    @include text(600, 13px, 18px, 0.1em);
+    color: rgba(157, 164, 189, 0.4);
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus::placeholder {
+        opacity: 1;
+    }
+}
+
+.contacts__label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    @include text(600, 13px, 18px, 0.1em);
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts__field:focus+.contacts__label,
+.contacts__field:not(:placeholder-shown)+.contacts__label {
+    transform: translateY(-200%);
+    color: #ffffff;
+}
+
+.contacts-messanger {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.contacts-messange__textarea {
+    resize: none;
+    width: 560px;
+}
+
+.contacts-messange__comment {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    transform: translateY(-50%);
+    @include text(600, 13px, 18px, 0.1em);
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-messange__textarea:focus+.contacts-messange__comment,
+.contacts-messange__textare:not(:placeholder-shown)+.contacts-messange__comment {
+    transform: translateY(-200%);
+    color: var(--primary-text-color);
+}
+
+.contacts__btn {
+    width: 160px;
+}
+
+.contacts__title--right {
+    color: var(--primary-text-color);
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contacts__item:last-child {
+    margin-bottom: 66px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    font-style: normal;
+    transition: color 250ms linear;
+    stroke: var(--secondary-text-color);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contacts__icon {
+    margin-right: 16px;
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.contacts__time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include text (600, 11px, 15px, 0.1em);
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    &::before {
+        content: '';
+        display: inline-block;
+        margin-right: 20px;
+        width: 60px;
+        height: 1px;
+        background-color: rgba(157, 164, 189, 0.4);
+    }
+}
+
+.contacts__timetable {
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+}

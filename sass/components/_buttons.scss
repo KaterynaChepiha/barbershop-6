@@ -1,0 +1,45 @@
+/* Стилізація кнопки */
+
+.button {
+    padding: 12px 20px;
+
+    font-family: inherit;
+    font-style: normal;
+    @include text (600, 12px, 16px, 0.09em);
+    text-transform: uppercase;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+
+    transition: background-color 250ms linear, 
+    color 250ms linear;
+
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+
+    &--mode-light {
+        color: #303030;
+    }
+
+    
+    &--mode-dark {
+        color: #FFFFFF;
+    }
+
+    &--mode-light:hover,
+    &--mode-light:focus {
+        color: #ffffff;
+    }
+}
+
+
+
+
+
+
+
